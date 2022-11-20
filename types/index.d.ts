@@ -1,5 +1,3 @@
-declare let __PROD__: boolean;
-
 declare module '*.svg' {
     const content: any;
     export default content;
@@ -16,7 +14,14 @@ declare module '@/src/services' {
     export const homeService: HomeProps;
     export const authService: AuthProps;
 }
-
-declare module 'homeServices' {
-    export const getPing: function;
+declare global {
+    let __PROD__: boolean;
 }
+
+declare global {
+    namespace globalThis {
+        let __PROD__: boolean;
+    }
+}
+
+export {};

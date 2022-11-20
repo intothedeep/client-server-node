@@ -60,7 +60,7 @@ export class App {
     }
 
     status404() {
-        this.app.use((req, res, _) => {
+        this.app.use((_, res, __) => {
             res.status(404).render('404.html');
         });
     }
