@@ -12,7 +12,7 @@
         }
     },
     "exclude": ["ts_dist", "webpack_build", "node_modules", "webpack.*", ".eslintrc.js"],
-    "include": ["src/**/*", "types/**/*", "src/modules/*"],
+    "include": ["src/**/*", "types/**/*", "src/practice/modules/*"],
     "compilerOptions": {
         "sourceMap": true,
         "rootDir": "./" /* Specify the root folder within your source files. */,

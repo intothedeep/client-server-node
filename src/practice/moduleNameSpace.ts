@@ -7,7 +7,7 @@
  *
  */
 
-import * as test from '../modules/namespace';
+import * as test from './modules/namespace';
 console.log('test:: ', test);
 console.log('test externalModuleValue: ', test.externalModuleValue);
 console.log('test sayHello: ', test.sayHello, test.sayHello('---------- tio lim'));
