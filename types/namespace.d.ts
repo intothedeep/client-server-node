@@ -7,7 +7,6 @@
 //     export const name: string;
 //     const name_internal: string;
 // }
-
 declare const externalModuleValue: string;
 declare function sayHello(str: string): void;
 declare function sayHello2(str: string): string;
