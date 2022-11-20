@@ -13,7 +13,7 @@
         "tsc": "tsc -p",
         "test": "jest",
         "prepare": "npx husky install",
-        "pre-commit": "lint-staged",
+        "pre-commit": "lint-staged && git push",
         "serve": "rm -rf ./build && cross-env NODE_ENV=development webpack serve --open --config webpack.development.js"
     },
     "author": "toDeep",
