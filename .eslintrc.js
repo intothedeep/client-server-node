@@ -22,12 +22,15 @@ module.exports = {
     ignorePatterns: ['webpack_build', 'ts_dist', 'node_modules', 'webpack.*', '.eslintrc.js'],
     rules: {
         // Prevent TypeScript-specific constructs from being erroneously flagged as unused
+        // Note: you must disable the base rule as it can report incorrect errors
+        'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': [
             'warn',
             {
-                argsIgnorePattern: '^_*',
-                varsIgnorePattern: '^_*',
-                caughtErrorsIgnorePattern: '^_*',
+                vars: 'all', // all | local
+                // varsIgnorePattern: '^_+$',
+                args: 'all', // all | after-used | none
+                argsIgnorePattern: '^_+$',
             },
         ],
         // Require PascalCased class and interface names
@@ -46,7 +49,6 @@ module.exports = {
             'error',
             { functions: false, classes: true, variables: true, typedefs: true },
         ],
-        '@typescript-eslint/no-unused-vars': ['warn', { args: 'all' }],
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-unsafe-call': 'off',
