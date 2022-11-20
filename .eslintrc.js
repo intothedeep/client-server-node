@@ -7,7 +7,9 @@ module.exports = {
         node: true,
     },
     extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:eslint-comments/recommended'],
-    overrides: [],
+    globals: {
+        process: 'readonly',
+    },
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
@@ -15,6 +17,7 @@ module.exports = {
         project: ['./tsconfig.json'], // Specify it only for TypeScript files
         tsconfigRootDir: __dirname,
     },
+    overrides: [],
     plugins: ['@typescript-eslint'],
     ignorePatterns: ['webpack_build', 'ts_dist', 'node_modules', 'webpack.*', '.eslintrc.js'],
     rules: {
@@ -55,8 +58,5 @@ module.exports = {
             },
         ],
         'no-param-reassign': 'error',
-    },
-    globals: {
-        process: 'readonly',
     },
 };
