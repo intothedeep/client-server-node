@@ -1,1 +1,1 @@
-export { router as home } from './home';
+export { router as home } from './route.home';

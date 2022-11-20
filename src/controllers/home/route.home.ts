@@ -1,4 +1,4 @@
-import { homeService } from './home.controller';
+import { homeService } from './controller.home';
 import { Router } from 'express';
 
 export const router = Router();
