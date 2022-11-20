@@ -13,6 +13,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
         project: ['./tsconfig.json'], // Specify it only for TypeScript files
+        tsconfigRootDir: __dirname,
     },
     plugins: ['@typescript-eslint'],
     ignorePatterns: ['webpack_build', 'ts_dist', 'node_modules', 'webpack.*', '.eslintrc.js'],
