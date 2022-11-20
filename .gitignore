@@ -1,11 +1,8 @@
+# misc
+*.pem
 .DS_Store
 .idea
 /.vscode/settings.json
-
-# project
-node_modules/
-/dist
-/build
 
 # Log files
 npm-debug.log*
@@ -22,3 +19,14 @@ local-*
 
 # husky
 .husky
+
+# dependencies
+/node_modules
+/ts_dist
+/webpack_build
+
+# production
+/build
+
+# typescript
+*.tsbuildinfo
