@@ -22,7 +22,14 @@ module.exports = {
     ignorePatterns: ['webpack_build', 'ts_dist', 'node_modules', 'webpack.*', '.eslintrc.js'],
     rules: {
         // Prevent TypeScript-specific constructs from being erroneously flagged as unused
-        // '@typescript-eslint/no-unused-vars'         : 'error',
+        '@typescript-eslint/no-unused-vars': [
+            'warn',
+            {
+                argsIgnorePattern: '_',
+                varsIgnorePattern: '_',
+                caughtErrorsIgnorePattern: '^_',
+            },
+        ],
         // Require PascalCased class and interface names
         // '@typescript-eslint/class-name-casing'      : 'error',
         // Require a specific member delimiter style for interfaces and type literals
